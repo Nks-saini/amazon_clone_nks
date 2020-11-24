@@ -26,16 +26,65 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="/css/custom.css" />
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!-- custom css file -->
+    <link rel="stylesheet" href="css/custom.css" />
+    <!-- bootstrap css file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- drawer css file -->
+    <link rel="stylesheet" href="css/bootstrap-drawer.css" />
+
     <title>amazon navbar</title>
   </head>
   <body>
     <!-- nav bar -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <button type="button" class="btn btn-outline-light">
+      <!-- drawer start-->
+      <button
+        type="button"
+        class="btn btn-outline-light"
+        data-toggle="drawer"
+        data-target="#amazonDrawer"
+      >
         <i class="fas fa-sliders-h"></i>
       </button>
+
+      <div
+        class="drawer drawer-left slide"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="drawer-demo-title"
+        aria-hidden="true"
+        id="amazonDrawer"
+      >
+        <div class="drawer-content drawer-content-scrollable" role="document">
+          <div class="drawer-header bg-dark text-white">
+            <h4 class="drawer-title mx-auto" id="drawer-demo-title">
+              <i class="fas fa-user-circle"></i>
+              Hello , Sign In
+            </h4>
+          </div>
+          <div class="drawer-body">
+            <h6 class="text-muted text-uppercase">Help & Settings</h6>
+            <a href="#" class="btn btn-outline-success btn-sm my-2"
+              >Your account</a
+            >
+            <a href="login.html" class="btn btn-warning btn-sm my-2">Sign In</a>
+          </div>
+          <div class="drawer-footer">
+            <button
+              type="button"
+              class="btn btn-outline-danger btn-sm"
+              data-dismiss="drawer"
+              aria-label="Close"
+            >
+              <i class="fas fa-2x fa-times"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- drawer ends -->
+
       <a class="navbar-brand pl-2" href="#">
         <img
           src="img/amazon_logo.png"
@@ -199,7 +248,9 @@
 
             <div class="dropdown-menu px-3" aria-labelledby="userAccount">
               <div class="d-flex flex-column justify-content-center">
-                <a href="login.html" class="btn btn-warning w-75 btn-sm font-weight-bold"
+                <a
+                  href="login.html"
+                  class="btn btn-warning w-75 btn-sm font-weight-bold"
                   >Signin</a
                 >
                 <small class="text-muted"
@@ -246,6 +297,9 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="/js/custom.js"></script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+    <!-- drawer js -->
+    <script src="js/bootstrap-drawer.js"></script>
   </body>
 </html>
