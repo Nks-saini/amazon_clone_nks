@@ -29,11 +29,11 @@
     <!-- custom css file -->
     <link rel="stylesheet" href="css/custom.css" />
     <!-- bootstrap css file -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
     <!-- drawer css file -->
     <link rel="stylesheet" href="css/bootstrap-drawer.css" />
 
-    <title>amazon navbar</title>
+    <title>Amazon : Your Orders </title>
   </head>
   <body>
     <!-- nav bar -->
@@ -65,7 +65,9 @@
           </div>
           <div class="drawer-body">
             <h6 class="text-muted text-uppercase">Help & Settings</h6>
-            <a href="your_account.html" class="btn btn-outline-success btn-sm my-2"
+            <a
+              href="your_account.html"
+              class="btn btn-outline-success btn-sm my-2"
               >Your account</a
             >
             <a href="login.html" class="btn btn-warning btn-sm my-2">Sign In</a>
@@ -273,6 +275,105 @@
     </nav>
 
     <!-- navbar end -->
+
+    <div class="container">
+      <!-- Url breadcrumbs starts -->
+      <nav>
+        <ol class="breadcrumb bg-transparent ml-n3">
+          <li class="breadcrumb-item">
+            <a href="your_account.html">Your Account</a>
+          </li>
+          <li class="breadcrumb-item active text-danger">Your Orders</li>
+        </ol>
+      </nav>
+      <!-- Url breadcrumbs ends -->
+
+      <!-- search orders starts -->
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Your Orders</h3>
+        </div>
+        <div class="col-md-8">
+          <form class="form-inline float-md-right">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <button type="button" class="btn btn-dark">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                name="orderName"
+                id="orderName"
+              />
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-dark">
+                  Search Orders
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- search orders ends -->
+
+      <!-- Order card starts -->
+
+      <div class="card mt-5">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-md-4 mt-3 mt-md-0">
+              <p class="text-uppercase text-muted my-0">oredr placed</p>
+              <p class="text-uppercase text-muted my-0">15 september 2020</p>
+            </div>
+            <div class="col-md-4 mt-3 mt-md-0">
+              <p class="text-uppercase text-muted my-0">total</p>
+              <p class="text-uppercase text-muted my-0">
+                <i class="fas fa-rupee-sign"></i> 150.00
+              </p>
+            </div>
+            <div class="col-md-4 mt-3 mt-md-0">
+              <p class="text-uppercase text-muted my-0 float-md-right">
+                order # XGSJSIEHKJHJ86858
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-1">
+              <img
+                src="img/product_img/headphone.jpg"
+                width="58"
+                height="90"
+                alt="product 01 image"
+              />
+            </div>
+            <div class="col-md-5">
+              <a href="#">Opppo Mobile A12</a>
+              <p class="text-muted my-0">Sold by : Narender modi</p>
+              <p class="text-uppercase my-0">
+                <i class="fas fa-rupee-sign"></i>
+                <span class="text-danger">150.00</span>
+              </p>
+            </div>
+
+            <div class="col-md-6 d-flex flex-column">
+              <a
+                href="#"
+                class="btn btn-outline-secondary btn-sm w-50 ml-auto my-1"
+                >Cancel order</a
+              >
+              <a href="#" class="btn btn-outline-info btn-sm w-50 ml-auto my-1"
+                >Generate Invoice</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Order card ends -->
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

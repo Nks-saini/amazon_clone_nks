@@ -65,7 +65,7 @@
           </div>
           <div class="drawer-body">
             <h6 class="text-muted text-uppercase">Help & Settings</h6>
-            <a href="#" class="btn btn-outline-success btn-sm my-2"
+            <a href="your_account.html" class="btn btn-outline-success btn-sm my-2"
               >Your account</a
             >
             <a href="login.html" class="btn btn-warning btn-sm my-2">Sign In</a>
@@ -253,7 +253,7 @@
                   >Signin</a
                 >
                 <small class="text-muted"
-                  >New customer ? <a href="#">Start here</a></small
+                  >New customer ? <a href="register.html">Start here</a></small
                 >
               </div>
             </div>
@@ -279,7 +279,7 @@
         <div class="card-body">
           <h4 class="card-title">Register</h4>
           <!-- Register form -->
-          <form novalidate>
+          <form class="needs-validation" method="post" action="#" autocomplete="off" novalidate>
             <div class="form-group">
                 <label for="userName">Your name :</label>
                 <input
@@ -288,8 +288,14 @@
                   class="form-control"
                   id="userName"
                   placeholder="enter name"
+                  required
                 />
-               
+                <div class="valid-feedback">
+                  <i class="fas text-success fa-thumbs-up"></i> Ok!
+                </div>
+                <div class="invalid-feedback">
+                  <i class="fas text-danger fa-exclamation-triangle"></i> Some error in your name.
+                </div>
               </div>
 
             <div class="form-group">
@@ -301,10 +307,17 @@
                 id="userEmail"
                 placeholder="abc@gmail.com"
                 aria-describedby="emailHelp"
+                required
               />
               <small id="emailHelp" class="form-text text-muted"
                 ><i class="fas text-primary fa-info"></i> We'll never share your email with anyone else.</small
               >
+              <div class="valid-feedback">
+                <i class="fas text-success fa-thumbs-up"></i> Ok!
+              </div>
+              <div class="invalid-feedback">
+                <i class="fas text-danger fa-exclamation-triangle"></i> Some error in email.
+              </div>
             </div>
             <div class="form-group">
               <label for="userPassword">Password :</label>
@@ -315,14 +328,22 @@
                 id="userPassword"
                 placeholder="******"
                 aria-describedby="passwordHelp"
+                required
+                minlength="6"
               />
               <small id="passwordHelp" class="form-text text-muted"
                 ><i class="fas text-primary fa-info"></i> Password must be six characters.</small
               >
+              <div class="valid-feedback">
+                <i class="fas text-success fa-thumbs-up"></i> Ok!
+              </div>
+              <div class="invalid-feedback">
+                <i class="fas text-danger fa-exclamation-triangle"></i> Some error in password.
+              </div>
             </div>
 
             <div class="form-group">
-                <label for="userPassword2">Enter Again Password :</label>
+                <label for="userPassword2">Password Again:</label>
                 <input
                   type="password"
                   name="password2"
@@ -330,10 +351,18 @@
                   id="userPassword2"
                   placeholder="******"
                   aria-describedby="passwordHelp2"
+                  required
+                   minlength="6"
                 />
                 <small id="passwordHelp" class="form-text text-muted"
                 ><i class="fas text-primary fa-info"></i> Password must match the above.</small
               >
+              <div class="valid-feedback">
+                <i class="fas text-success fa-thumbs-up"></i> Ok!
+              </div>
+              <div class="invalid-feedback">
+                <i class="fas text-danger fa-exclamation-triangle"></i> Some error in re-type password.
+              </div>
               </div>
 
             <button
@@ -388,5 +417,25 @@
     <script src="js/custom.js"></script>
     <!-- drawer js -->
     <script src="js/bootstrap-drawer.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+      </script>
   </body>
 </html>
