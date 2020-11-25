@@ -33,7 +33,7 @@
     <!-- drawer css file -->
     <link rel="stylesheet" href="css/bootstrap-drawer.css" />
 
-    <title>Amazon : Your Account</title>
+    <title>Amazon : Add New Address</title>
   </head>
   <body>
     <!-- nav bar -->
@@ -274,65 +274,101 @@
 
     <!-- navbar end -->
 
-    <!-- your account starts -->
-    <div class="container mt-5">
-      <h2>Your Account</h2>
-      <!-- account pannel starts -->
-      <div class="row">
-        <div class="col-md-4">
-          <a href="your_orders.html" class="btn w-100">
-            <div class="card">
-              <div class="card-body">
-                <div class="card-title">
-                  <i class="fas fa-2x fa-shopping-bag"></i>
-                  <span class="h4">Your Orders</span>
-                </div>
-                <small class="text-muted"
-                  >Track,return or buy things again .</small
-                >
+    
+
+    <div class="container w-50 mt-5 mb-5">
+        <!-- Url breadcrumbs starts -->
+        <nav>
+            <ol class="breadcrumb bg-transparent ml-n3">
+            <li class="breadcrumb-item">
+                <a href="your_account.html">Your Account</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="your_addresses.html">Your Address</a>
+            </li>
+            <li class="breadcrumb-item active text-danger">New Address</li>
+            </ol>
+        </nav>
+        <!-- Url breadcrumbs ends -->
+        <h3 class="font-weight-bold"> Add a new address</h3>
+        <p class="font-weight-bold">Or pick up your package at your convience from our self service location.</p>
+
+
+        <!-- New Address form starts -->
+        <form action="" class="w-85 mx-auto font-weight-bold">
+            <div class="form-group">
+                <label for="country">Country/Region</label>
+                <select  class="form-control" id="country">
+                  <option>India</option>
+                  <option>Pakistan</option>
+                  <option>Bangladesh</option>
+                  <option>Nepal</option>
+                  <option>Srilanka</option>
+                </select>
               </div>
-            </div>
-          </a>
-        </div>
 
-        <div class="col-md-4">
-          <a href="change_password.html" class="btn w-100">
-            <div class="card" >
-              <div class="card-body">
-                <div class="card-title">
-                    <i class="fas fa-2x fa-key"></i>
-                  <span class="h4">Password Change</span>
-                </div>
-                <small class="text-muted"
-                  >Change your password .</small
-                >
+              <div class="form-group">
+                <label for="username">Full Name</label>
+                <input type="text" class="form-control" name="username" id="username">
               </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-md-4">
-          <a href="your_addresses.html" class="btn w-100">
-            <div class="card">
-              <div class="card-body">
-                <div class="card-title">
-                    <i class="fas fa-2x fa-map-marked"></i>
-                  <span class="h4">Your Address</span>
-                </div>
-                <small class="text-muted"
-                  >Edit address for orders.</small
-                >
+              <div class="form-group">
+                <label for="mobilenumber">Mobile Number</label>
+                <input type="text" class="form-control" name="mobilenumber" id="mobilenumber" placeholder="10 digit mobile number without prefixes">
+                <small class="form-text text-muted">May be used to assist delivery.</small>
               </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <!-- account pannel ends -->
 
-      <!-- <div class="dropdown-divider"></div> -->
+              <div class="form-group">
+                <label for="pincode">Pin Code</label>
+                <input type="text" class="form-control" name="pincode" id="pincode" placeholder="6 digit [0-9] pin code ">
+              </div>
 
-    </div>
-    <!-- your account ends -->
+              <div class="form-group">
+                <label for="houseNumber">Flat, House No, Building, company, Apartment</label>
+                <input type="text" class="form-control" name="houseNumber" id="houseNumber" >
+              </div>
+
+              <div class="form-group">
+                <label for="area">Area ,Colony, Street, Sector, Village</label>
+                <input type="text" class="form-control" name="area" id="area">
+              </div>
+
+              <div class="form-group">
+                <label for="landmark">Landmark</label>
+                <input type="text" class="form-control" name="landmark" id="landmark" placeholder="E.g. Near AIIMS, Flyover, Avatar Cinema, sector-18, Noida">
+              </div>
+
+              <div class="form-group">
+                <label for="city">Town/City</label>
+                <input type="text" class="form-control" name="city" id="city">
+              </div>
+
+              <div class="form-group">
+                <label for="state">State / Province / Region</label>
+                <select  class="form-control" id="state" name="state">
+                    <option>India</option>
+                    <option>Pakistan</option>
+                    <option>Bangladesh</option>
+                    <option>Nepal</option>
+                    <option>Srilanka</option>
+                  </select>
+              </div>
+
+              <h5>Add Delivery Instruction</h5>
+              <p>Prefereces are used to plan delivery. However, shipments can sometimes arrive early or later than planned.</p>
+
+              <div class="form-group">
+                <label for="addressType">Address Type</label>
+                <select  class="form-control" id="addressType" name="addressType">
+                    <option>Select an Address Type</option>
+                    <option>Home (7 am - 9 pm) delivery</option>
+                    <option>Office/Commerical (10 AM - 6 PM delivery)</option>       
+                  </select>
+              </div>
+
+              <button type="submit" class="btn btn-warning shadow rounded">Add address</button>
+        </form>
+        <!-- New Address form ends -->
+    </div>  
 
     <!-- Optional JavaScript; choose one of the two! -->
 

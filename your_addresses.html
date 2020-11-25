@@ -33,7 +33,7 @@
     <!-- drawer css file -->
     <link rel="stylesheet" href="css/bootstrap-drawer.css" />
 
-    <title>Amazon : Your Account</title>
+    <title>Amazon : Your Address</title>
   </head>
   <body>
     <!-- nav bar -->
@@ -274,66 +274,57 @@
 
     <!-- navbar end -->
 
-    <!-- your account starts -->
-    <div class="container mt-5">
-      <h2>Your Account</h2>
-      <!-- account pannel starts -->
-      <div class="row">
-        <div class="col-md-4">
-          <a href="your_orders.html" class="btn w-100">
-            <div class="card">
-              <div class="card-body">
-                <div class="card-title">
-                  <i class="fas fa-2x fa-shopping-bag"></i>
-                  <span class="h4">Your Orders</span>
-                </div>
-                <small class="text-muted"
-                  >Track,return or buy things again .</small
-                >
-              </div>
-            </div>
-          </a>
-        </div>
+    <div class="container">
+    <!-- Url breadcrumbs starts -->
+    <nav>
+      <ol class="breadcrumb bg-transparent ml-n3">
+        <li class="breadcrumb-item">
+          <a href="your_account.html">Your Account</a>
+        </li>
+        <li class="breadcrumb-item active text-danger">Your Address</li>
+      </ol>
+    </nav>
+    <!-- Url breadcrumbs ends -->
+    <h3> Your Address</h3>
 
-        <div class="col-md-4">
-          <a href="change_password.html" class="btn w-100">
-            <div class="card" >
-              <div class="card-body">
-                <div class="card-title">
-                    <i class="fas fa-2x fa-key"></i>
-                  <span class="h4">Password Change</span>
-                </div>
-                <small class="text-muted"
-                  >Change your password .</small
-                >
-              </div>
+    <!-- Address card start -->
+    <div class="row">
+      <div class="col-md-4 my-md-0 my-2">
+        <a href="add_new_address.html" class="btn bg-transparent m-0 p-0">
+          <div class="card" style="width:320px; height: 220px; border: 2px dashed #c7c7cc;">
+            <div class="card-body pt-5">
+              <i class="fas fa-3x fa-plus" style="color: #c7c7cc;"></i>
+              <h5 class="card-title">Add Address</h5>
             </div>
-          </a>
-        </div>
-
-        <div class="col-md-4">
-          <a href="your_addresses.html" class="btn w-100">
-            <div class="card">
-              <div class="card-body">
-                <div class="card-title">
-                    <i class="fas fa-2x fa-map-marked"></i>
-                  <span class="h4">Your Address</span>
-                </div>
-                <small class="text-muted"
-                  >Edit address for orders.</small
-                >
-              </div>
-            </div>
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
-      <!-- account pannel ends -->
 
-      <!-- <div class="dropdown-divider"></div> -->
+      <div class="col-md-4 my-md-0 my-2">      
+          <div class="card" style="width:320px;">
+            <div class="card-header bg-transparent">
+              <p class="text-muted p-0 m-0">Default : <i class="fab fa-amazon"></i></p>
+            </div>
+            <div class="card-body m-0 pt-1">
+              <p class="font-weight-bold my-0 py-0">Ramesh kumar</p>
+              <p class="my-0 py-0">House No 125</p>
+              <p class="my-0 py-0">ABC</p>
+              <p class="my-0 py-0">Moradabad UP !26750</p>
+              <p class="my-0 py-0">India</p>
+              <p class="my-0 py-0">Phone Number : 992765438</p>
+            </div>
+            <div class="card-footer bg-transparent">
+              <a href="#" class="btn btn-outline-info btn-sm"><i class="fas fa-pencil-alt"></i></a>
+              <a href="#" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+            </div>
+          </div>    
+      </div>
+
+      
+   </div>
 
     </div>
-    <!-- your account ends -->
-
+    
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
