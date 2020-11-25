@@ -25,6 +25,7 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
+
     <!-- custom css file -->
     <link rel="stylesheet" href="css/custom.css" />
     <!-- bootstrap css file -->
@@ -32,7 +33,7 @@
     <!-- drawer css file -->
     <link rel="stylesheet" href="css/bootstrap-drawer.css" />
 
-    <title>amazon navbar</title>
+    <title>Amazon : Register</title>
   </head>
   <body>
     <!-- nav bar -->
@@ -271,6 +272,94 @@
     </nav>
 
     <!-- navbar end -->
+
+    <!-- Register forms card start -->
+    <div class="container mb-5">
+      <div class="card mx-auto mt-5 pb-3 shadow rounded" style="width: 25rem">
+        <div class="card-body">
+          <h4 class="card-title">Register</h4>
+          <!-- Register form -->
+          <form novalidate>
+            <div class="form-group">
+                <label for="userName">Your name :</label>
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  id="userName"
+                  placeholder="enter name"
+                />
+               
+              </div>
+
+            <div class="form-group">
+              <label for="userEmail">Email :</label>
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                id="userEmail"
+                placeholder="abc@gmail.com"
+                aria-describedby="emailHelp"
+              />
+              <small id="emailHelp" class="form-text text-muted"
+                ><i class="fas text-primary fa-info"></i> We'll never share your email with anyone else.</small
+              >
+            </div>
+            <div class="form-group">
+              <label for="userPassword">Password :</label>
+              <input
+                type="password"
+                name="password"
+                class="form-control"
+                id="userPassword"
+                placeholder="******"
+                aria-describedby="passwordHelp"
+              />
+              <small id="passwordHelp" class="form-text text-muted"
+                ><i class="fas text-primary fa-info"></i> Password must be six characters.</small
+              >
+            </div>
+
+            <div class="form-group">
+                <label for="userPassword2">Enter Again Password :</label>
+                <input
+                  type="password"
+                  name="password2"
+                  class="form-control"
+                  id="userPassword2"
+                  placeholder="******"
+                  aria-describedby="passwordHelp2"
+                />
+                <small id="passwordHelp" class="form-text text-muted"
+                ><i class="fas text-primary fa-info"></i> Password must match the above.</small
+              >
+              </div>
+
+            <button
+              type="submit"
+              class="btn btn-warning w-100 btn-sm shadow rounded"
+            >
+              Register
+            </button>
+          </form>
+          <!-- Register form end-->
+
+          <!-- or seperator -->
+          <hr class="hr-text" data-content="OR" />
+
+          <!-- create account button -->
+          <p class="text-center">Already have an account? <a href="login.html">Sigin <i class="fas fa-caret-right"></i></a></p>
+          <a href="#" class="btn btn-outline-success btn-sm w-100 mt-2">
+            <i class="fab fa-google"></i> Sign in with google
+          </a>
+          <a href="#" class="btn btn-outline-primary btn-sm w-100 mt-2">
+            <i class="fab fa-facebook-square"></i> Sign in with facebook
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- login forms card ends -->
 
     <!-- Optional JavaScript; choose one of the two! -->
 
