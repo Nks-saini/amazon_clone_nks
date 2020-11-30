@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+
+    <!-- amazon favicon -->
+    <link rel="icon" href="img/fav.png" image="image/gif" sizes="16*16" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css file -->
+    <link rel="stylesheet" href="css/custom.css" />
+    <!-- bootstrap css file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- drawer css file -->
+    <link rel="stylesheet" href="css/bootstrap-drawer.css" />
+
+    <title>Amazon : Select Address</title>
+  </head>
+  <body>
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <!-- drawer start-->
+      <button
+        type="button"
+        class="btn btn-outline-light"
+        data-toggle="drawer"
+        data-target="#amazonDrawer"
+      >
+        <i class="fas fa-sliders-h"></i>
+      </button>
+
+      <div
+        class="drawer drawer-left slide"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="drawer-demo-title"
+        aria-hidden="true"
+        id="amazonDrawer"
+      >
+        <div class="drawer-content drawer-content-scrollable" role="document">
+          <div class="drawer-header bg-dark text-white">
+            <h4 class="drawer-title mx-auto" id="drawer-demo-title">
+              <i class="fas fa-user-circle"></i>
+              Hello , Sign In
+            </h4>
+          </div>
+          <div class="drawer-body">
+            <h6 class="text-muted text-uppercase">Help & Settings</h6>
+            <a href="your_account.html" class="btn btn-outline-success btn-sm my-2"
+              >Your account</a
+            >
+            <a href="login.html" class="btn btn-warning btn-sm my-2">Sign In</a>
+          </div>
+          <div class="drawer-footer">
+            <button
+              type="button"
+              class="btn btn-outline-danger btn-sm"
+              data-dismiss="drawer"
+              aria-label="Close"
+            >
+              <i class="fas fa-2x fa-times"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- drawer ends -->
+
+      <a class="navbar-brand pl-2" href="#">
+        <img
+          src="img/amazon_logo.png"
+          height="30"
+          width="100"
+          alt="amazon_logo"
+        />
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- search bar start -->
+        <form class="form-inline px-lg-5" novalidate method="get">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  id="btnCategoryDropdownMenu"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  All
+                </button>
+                <div
+                  class="dropdown-menu"
+                  aria-labelledby="btnCategoryDropdownMenu"
+                >
+                  <a class="dropdown-item" href="#">All</a>
+                  <a class="dropdown-item" href="#">Smart Phone</a>
+                  <a class="dropdown-item" href="#">Kitchens Hardware</a>
+                  <a class="dropdown-item" href="#">Books</a>
+                </div>
+              </div>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              size="70"
+              name="query"
+              id="query"
+            />
+            <input
+              type="text"
+              value="book"
+              name="category"
+              id="category"
+              hidden
+            />
+            <div class="input-group">
+              <button type="submit" class="btn btn-warning">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+        <!-- search bar end -->
+        <ul class="navbar-nav">
+          <!-- preferd language start -->
+          <li class="nav-item dropdown px-2">
+            <a
+              class="nav-link"
+              href="#"
+              id="prefLanguageDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fas fa-2x fa-language"></i>
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="prefLanguageDropdown">
+              <form class="p-3">
+                <div class="custom-control custom-radio mb-2">
+                  <input
+                    class="custom-control-input"
+                    type="radio"
+                    name="prefLang"
+                    id="englishLang"
+                    value="english"
+                    checked
+                  />
+                  <label class="custom-control-label" for="englishLang">
+                    <img
+                      src="img/flag/english.png"
+                      alt="UK flag"
+                      width="40"
+                      height="20"
+                    />
+                  </label>
+                </div>
+
+                <div class="custom-control custom-radio mb-2">
+                  <input
+                    class="custom-control-input"
+                    type="radio"
+                    name="prefLang"
+                    id="hindiLang"
+                    value="hindi"
+                    checked
+                  />
+                  <label class="custom-control-label" for="hindiLang">
+                    <img
+                      src="img/flag/hindi.jpg"
+                      alt="INDIA flag"
+                      width="40"
+                      height="20"
+                    />
+                  </label>
+                </div>
+
+                <div class="custom-control custom-radio">
+                  <input
+                    class="custom-control-input"
+                    type="radio"
+                    name="prefLang"
+                    id="urduLang"
+                    value="urdu"
+                    checked
+                  />
+                  <label class="custom-control-label" for="urduLang">
+                    <img
+                      src="img/flag/urdu.jpg"
+                      alt="Pakistan flag"
+                      width="40"
+                      height="20"
+                    />
+                  </label>
+                </div>
+              </form>
+            </div>
+          </li>
+          <!-- preferd language ends -->
+          <!-- user account start -->
+          <li class="nav-item dropdown px-2">
+            <a
+              class="nav-link"
+              href="#"
+              id="userAccount"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fas text-info fa-2x fa-user-circle"></i>
+            </a>
+
+            <div class="dropdown-menu px-3" aria-labelledby="userAccount">
+              <div class="d-flex flex-column justify-content-center">
+                <a
+                  href="login.html"
+                  class="btn btn-warning w-75 btn-sm font-weight-bold"
+                  >Signin</a
+                >
+                <small class="text-muted"
+                  >New customer ? <a href="register.html">Start here</a></small
+                >
+              </div>
+            </div>
+          </li>
+          <!-- user acc ends -->
+          <!-- shoping cart start -->
+          <li class="nav-item">
+            <a class="nav-link" href="#" aria-disabled="true">
+              <i class="fas text-light fa-2x fa-shopping-cart"></i>
+              <span class="badge badge-warning badge-pill">10</span>
+            </a>
+          </li>
+          <!-- shoping cart ends -->
+        </ul>
+      </div>
+    </nav>
+
+    <!-- navbar end -->
+
+    <!-- select saddress starts -->
+    <div class="container my-5">
+
+        <!-- progress status starts-->
+        <div class="d-flex flex-column">
+          <!-- cart movement -->
+          <div class="d-flex flex-row text-uppercase justify-content-around" style="font-size: 12px;">
+            <p></p>
+            <p class="mb-0 pb-0"><i class="fas fa-3x fa-cart-arrow-down text-success"></i></p>
+            <p></p>
+            <p></p>
+          </div>
+       
+
+          <!-- progress bar -->
+          <div class="progress" style="height: 5px;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 25%; background-color: #e47911;"></div>
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 12.5%; background-color: #e47911"></div>
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%; background-color: #e47911"></div>
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%; background-color: #e47911"></div>
+          </div>
+
+          <div class="d-flex flex-row text-uppercase justify-content-around" style="font-size: 12px;">
+            <p>sign in</p>
+            <p class="font-weight-bold">delivery & payment</p>
+            <p>place order</p>
+            <p class="text-muted">complete payment</p>
+          </div>
+
+        </div>
+        <!-- progress status ends-->
+
+        <h3>Select a delivery address</h3>
+        <p>Is the address you'd like to use displayed below? If so, click the corresponding "Deliver to this address" button. Or you can enter a new delivery address. </p>
+        <h4>On the move? Pick up your order from our pickup store.</h4>
+
+        <div class="dropdown-divider"></div>
+        <div class="card my-3" style="width: 18rem;">
+            <div class="card-body">
+                <p class="font-weight-bold my-0 py-0">Ramesh kumar</p>
+                <p class="my-0 py-0">House No 125</p>
+                <p class="my-0 py-0">ABC</p>
+                <p class="my-0 py-0">Moradabad UP !26750</p>
+                <p class="my-0 py-0">India</p>
+                <p class="my-0 py-0">Phone Number : 992765438</p>
+                <button class="btn btn-warning btn-block btn-sm mt-3">Deliver to this address</button>
+            </div>
+        </div>
+
+        <div class="card my-3" style="width: 18rem;">
+            <div class="card-body">
+                <p class="font-weight-bold my-0 py-0">Ramesh kumar</p>
+                <p class="my-0 py-0">House No 125</p>
+                <p class="my-0 py-0">ABC</p>
+                <p class="my-0 py-0">Moradabad UP !26750</p>
+                <p class="my-0 py-0">India</p>
+                <p class="my-0 py-0">Phone Number : 992765438</p>
+                <button class="btn btn-warning btn-block btn-sm mt-3">Deliver to this address</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- select address end -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+      integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+    <!-- drawer js -->
+    <script src="js/bootstrap-drawer.js"></script>
+  </body>
+</html>
